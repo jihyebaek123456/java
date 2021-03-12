@@ -2,6 +2,7 @@ package b_operator;
 public class ComparingOperator {
 
 	public static void main(String[] args) {
+		//연산2
 		
 		//비교 연산
 		int x = 10;

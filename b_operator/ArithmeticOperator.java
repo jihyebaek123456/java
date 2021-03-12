@@ -3,6 +3,7 @@ package b_operator;
 
 public class ArithmeticOperator {
 	public static void main(String[] args) {
+		//연산1
 		
 		//산술 연산
 		int result = 10 + 20 - 30 * 40 / 50 % 60;
