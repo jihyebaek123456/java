@@ -1,5 +1,7 @@
 package a_variable;
+
 import java.util.Scanner;
+
 public class Homework01 {
 
 	public static void main(String[] args) {
@@ -24,7 +26,7 @@ public class Homework01 {
 		System.out.println("아이디 : " + myID);
 		System.out.println("비밀번호 : " + myPW);
 		System.out.println("이름 : " + myName);
-		System.out.println("나이 : " + myAge + "세");
+		System.out.println("나이 : " + myAge);
 		System.out.println("키 : " + myHeight + "cm");
 		System.out.println("=======================");
 	}
