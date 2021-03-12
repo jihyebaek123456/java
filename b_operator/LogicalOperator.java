@@ -2,9 +2,6 @@ package b_operator;
 public class LogicalOperator {
 
 	public static void main(String[] args) {
-		//연산3
-		
-		//논리 연산
 		int x = 10;
 		int y = 20;
 		boolean b = 0 < x && x < 10 || x < y;
