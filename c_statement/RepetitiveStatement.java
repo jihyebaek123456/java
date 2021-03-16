@@ -116,19 +116,19 @@ public class RepetitiveStatement {
 		System.out.println();
 		
 		//do-while문 - 숫자 맞추기 게임
-//		int answer = (int)(Math.random()*100) + 1;
-//		int input = 0;
-//		Scanner s = new Scanner(System.in);
-//		do {
-//			System.out.print("1부터 100 사이의 숫자 입력> ");
-//			input = Integer.parseInt(s.nextLine());
-//			if(answer < input)
-//				System.out.println(input + "보다 작습니다." + '\n');
-//			else if(answer > input)
-//				System.out.println(input + "보다 큽니다." + '\n');
-//			else
-//				System.out.println("정답입니다." + '\n');
-//		} while(input != answer);
+		int answer = (int)(Math.random()*100) + 1;
+		int input = 0;
+		Scanner s = new Scanner(System.in);
+		do {
+			System.out.print("1부터 100 사이의 숫자 입력> ");
+			input = Integer.parseInt(s.nextLine());
+			if(answer < input)
+				System.out.println(input + "보다 작습니다." + '\n');
+			else if(answer > input)
+				System.out.println(input + "보다 큽니다." + '\n');
+			else
+				System.out.println("정답입니다." + '\n');
+		} while(input != answer);
 		
 		//이름 붙은 반복문
 		outer : for(int i=2 ; i<=9 ; i++) {
@@ -201,5 +201,6 @@ public class RepetitiveStatement {
 		}
 		
 		System.out.println();
+		
 	}
 }
