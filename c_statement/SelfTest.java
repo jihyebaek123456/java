@@ -3,11 +3,12 @@ import java.util.Scanner;
 public class SelfTest {
 
 	public static void main(String[] args) {
+		
 		//테스트 진행 프로그램 만들기
 		Scanner sc = new Scanner(System.in);
+		int count = 0;
 		
 		//질문지
-		int count = 0;
 		System.out.println("맞으면 1, 틀리면 2를 입력해주세요." + "\n");
 		System.out.print("1. 아침을 배불리 먹은 후 점심시간 전에 배가 고프다." + "\n" + "답 : ");
 		int ans = Integer.parseInt(sc.nextLine());
