@@ -297,26 +297,7 @@ public class ConditionalStatement {
 			nu3 = t;
 		}
 		
-		System.out.println("오름차순 정렬 : " + nu1 + ", " + nu2 + ", " + nu3);
-		
-		//문제6 - 배열 풀이
-//		int[] random = new int[2];
-//		random[0] = 3;
-//		random[1] = 57;
-//		random[2] = 34;
-//		int minNum;
-//		
-//		System.out.print("오름차순 정렬 : ");
-//		for(int i = 0; i<random.length ; i++) {
-//			minNum = random[i];
-//			for(int j = i + 1 ; j<random.length ; j++) {
-//				if(minNum >= random[j]) {
-//					minNum = random[j];
-//				}
-//			}
-//			System.out.print(minNum + " ");
-//		}
-		
+		System.out.println("오름차순 정렬 : " + nu1 + ", " + nu2 + ", " + nu3);		
 		
 	}
 }
