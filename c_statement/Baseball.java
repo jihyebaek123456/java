@@ -48,5 +48,31 @@ public class Baseball {
 		} while(num1 != ans1 || num2 != ans2 || num3 != ans3);
 		
 		System.out.println("뽑은 숫자: " + num1 + "" + num2 + "" + num3);
+		
+		//세 자리 숫자를 입력하는 방법
+		/*int count = 0;  //시도 횟수
+		
+		while(true) {
+			System.out.println("세 자리 숫자> ");
+			int input = Integer.parseInt(sc.nextLine());
+			int i3 = input % 10;
+			input /= 10;
+			int i2 = input % 10;
+			input /= 10;
+			int i1 = input % 10;
+			
+			//코드 줄이기
+			if(num1 == i1) { strike++; }  //복붙
+
+			if(num1 == i2 || num1 == i3) { ball++; }  //복붙
+			
+			out = 3 - strike - ball;
+			
+			//반복문 빠져나오기
+			if(strike == 3) {
+				System.out.println("정답!");
+				break;
+			}
+		}*/
 	}
 }
