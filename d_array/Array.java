@@ -51,27 +51,6 @@ public class Array {
 		}
 		System.out.println(Arrays.toString(arr));
 		
-		//배열에 저장된 모든 값의 합계 및 평균 출력
-		int sum = 0;
-		for(int i=0 ; i<arr.length ; i++) {
-			sum += arr[i];
-		}
-		double avg = Math.round(sum / (double)(arr.length) * 10) / 10.0;
-		System.out.println("sum: " + sum + ", avg: " + avg);
-		
-		//최댓값, 최솟값 출력
-		int max = arr[0];
-		int min = arr[0];
-		for(int i=0 ; i<arr.length ; i++) {
-			if(max <= arr[i]) {
-				max = arr[i];
-			}
-			if(min >= arr[i]) {
-				min = arr[i];
-			}
-		}
-		System.out.println("min: " + min + ", max: " + max);
-		
 		//오름차순 정렬
 		int save, num, count;
 		
@@ -97,6 +76,27 @@ public class Array {
 			}
 		}
 		System.out.println(Arrays.toString(arr));
+		
+		//배열에 저장된 모든 값의 합계 및 평균 출력
+		int sum = 0;
+		for(int i=0 ; i<arr.length ; i++) {
+			sum += arr[i];
+		}
+		double avg = Math.round(sum / (double)(arr.length) * 10) / 10.0;
+		System.out.println("sum: " + sum + ", avg: " + avg);
+		
+		//최댓값, 최솟값 출력
+		int max = arr[0];
+		int min = arr[0];
+		for(int i=0 ; i<arr.length ; i++) {
+			if(max <= arr[i]) {
+				max = arr[i];
+			}
+			if(min >= arr[i]) {
+				min = arr[i];
+			}
+		}
+		System.out.println("min: " + min + ", max: " + max);
 		System.out.println();
 		
 		int[] shuffle = new int[10];
