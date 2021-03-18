@@ -82,7 +82,7 @@ public class Array {
 		for(int i=0 ; i<arr.length ; i++) {
 			sum += arr[i];
 		}
-		double avg = Math.round(sum / (double)(arr.length) * 10) / 10.0;
+		double avg = (double)(sum)/arr.length;
 		System.out.println("sum: " + sum + ", avg: " + avg);
 		
 		//최댓값, 최솟값 출력
