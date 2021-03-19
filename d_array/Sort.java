@@ -9,6 +9,7 @@ public class Sort {
 			arr[i] = (int)(Math.random() * 100) + 1;
 		}
 		System.out.println(Arrays.toString(arr));
+		System.out.println();
 		
 		//석차 구하기
 		int[] rank = new int[arr.length];
