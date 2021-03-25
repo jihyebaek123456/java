@@ -62,6 +62,7 @@ public class Sort {
 			if(flag) {
 				break;
 			}
+			
 		}
 		
 		System.out.println(Arrays.toString(arr));
