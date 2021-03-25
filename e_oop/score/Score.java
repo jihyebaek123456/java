@@ -21,11 +21,10 @@ public class Score {
 		//학생 별 합계 + 평균
 		for(int i=0 ; i<students.length ; i++) {
 			students[i].sum = students[i].kor + students[i].eng + students[i].math;
-			students[i].avg = Math.round(students[i].sum / 3.0 * 10) / 10.0;
+			students[i].avg = Math.round(students[i].sum / 3.0 * 100) / 100.0;
 		}
 		//석차
 		for(int i=0 ; i<students.length ; i++) {
-			students[i].rank = 1;
 			for(int j=0 ; j<students.length ; j++) {
 				if(students[i].sum < students[j].sum) {
 					students[i].rank++;
@@ -38,15 +37,11 @@ public class Score {
 		double[] subAvg = new double[3];
 		for(int i=0 ; i<students.length ; i++) {
 			subSum[0] += students[i].kor;
-		}		
-		for(int i=0 ; i<students.length ; i++) {
 			subSum[1] += students[i].eng;
-		}
-		for(int i=0 ; i<students.length ; i++) {
 			subSum[2] += students[i].math;
-		}
+		}		
 		for(int i=0 ; i<subAvg.length ; i++) {
-			subAvg[i] = Math.round((double)subSum[i] / students.length * 10) / 10.0;
+			subAvg[i] = Math.round((double)subSum[i] / students.length * 100) / 100.0;
 		}
 		
 		//출력
@@ -55,7 +50,7 @@ public class Score {
 		}
 		System.out.println();
 		
-		for(int i=0 ; i<students.length ; i++) {
+		for(int i=0 ; i<students.length ; i++) {					//다른 정렬도 이용해보기
 			for(int j=0 ; j<students.length ; j++) {
 				if(students[j].rank == i + 1) {
 					System.out.print(students[j].name + "\t");
@@ -68,6 +63,7 @@ public class Score {
 				}
 			}
 		}
+		
 		System.out.print("과목합계\t");
 		for(int i=0 ; i<subSum.length ; i++) {
 			System.out.print(subSum[i] + "\t");
