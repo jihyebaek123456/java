@@ -171,7 +171,7 @@ public class Quiz {
 		for(int i=0 ; i<result.length; i++) {
 			result[i] = temp2[i];
 		}
-
+		
 		//정렬
 		for(int i=0 ; i<result.length ; i++) {
 			int min = i;
