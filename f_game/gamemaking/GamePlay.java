@@ -6,13 +6,13 @@ public class GamePlay {
 	
 	Pet pet;
 	Shop shop;
+	Activity activity;
 	int shoppingNum;
 	int ItemNum;
 	
 	public static void main(String[] args) {
 		GamePlay game = new GamePlay();
 		game.gameStart();
-		
 	}
 	
 	//게임 첫 실행
@@ -25,6 +25,7 @@ public class GamePlay {
 		String name = ScanUtil.nextLine();
 		pet = new Pet(name);
 		System.out.println("\n--------------------------------\n");
+		activity = new Activity();
 		shop = new Shop();
 		shoppingNum = 0;
 	}
@@ -75,11 +76,11 @@ public class GamePlay {
 	//1. 돈 벌기
 	void gameGetMoney() {
 		System.out.println("\n-----------다마고치 키우기-----------\n");
-		System.out.println("1. 사냥하기\t\t소지금 : " + pet.gold + "G");
-		System.out.println("2. 농사하기\t\tDAY " + pet.day);
-		System.out.println("3. 낚시하기");
-		System.out.println("4. 광물캐기");
-		System.out.println("5. 요리하기");
+		System.out.println("1. 사냥하기(★☆☆)\t\t소지금 : " + pet.gold + "G");
+		System.out.println("2. 광물캐기(★☆☆)\t\tDAY " + pet.day);
+		System.out.println("3. 농사하기(★★☆)");
+		System.out.println("4. 낚시하기(★★☆)");
+		System.out.println("5. 요리하기(★★★)");
 		System.out.println("\n0. 돌아가기");		
 		System.out.println("\n--------------------------------\n");
 		
@@ -93,23 +94,28 @@ public class GamePlay {
 			switch(ans) {
 			case 1:
 				flag = false;
-				//사냥
+				activity.hunting(pet);
+				gameGetMoney();
 				break;
 			case 2:
 				flag = false;
-				//농사
+				activity.mining(pet);
+				gameGetMoney();
 				break;
 			case 3:
 				flag = false;
-				//낚시
+				activity.farming(pet);
+				gameGetMoney();
 				break;
 			case 4:
 				flag = false;
-				//광물
+				activity.fishing(pet);
+				gameGetMoney();
 				break;
 			case 5:
 				flag = false;
-				//요리
+				activity.cooking(pet);
+				gameGetMoney();
 				break;
 			case 0:
 				flag = false;
@@ -127,7 +133,7 @@ public class GamePlay {
 	void gameCarePet() {
 		System.out.println("\n-----------다마고치 키우기-----------\n");
 		pet.showPet();
-		System.out.println("1. 밥 주기\t\t\t소지금 : " + pet.gold + "G");
+		System.out.println("1. 밥 주기\t\t소지금 : " + pet.gold + "G");
 		System.out.println("2. 간식 주기\t\tDAY " + pet.day);
 		System.out.println("3. 목욕 시키기");
 		System.out.println("4. 화장실 치우기");
@@ -308,7 +314,5 @@ public class GamePlay {
 			}
 		}
 	}
-	
-	
 	
 }

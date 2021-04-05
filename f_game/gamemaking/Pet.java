@@ -30,7 +30,7 @@ public class Pet {
 		
 		dayCount = 0;
 		day = 1;
-		gold = 100;
+		gold = 5;
 		petItems = new Items[30];
 		num = 0;
 	}
@@ -45,7 +45,7 @@ public class Pet {
 		System.out.println("청결 : " + clean + " / " + max);
 		System.out.println("재미 : " + fun + " / " + max);
 		System.out.println();				
-		System.out.println("상태 : " + growth + " / " + MAX_GROWTH);
+		System.out.println("성장 : " + growth + " / " + MAX_GROWTH);
 		System.out.println();				
 		System.out.println("==================================\n");
 	}
@@ -180,7 +180,7 @@ public class Pet {
 			System.out.println("사용할 수 있는 아이템이 없습니다.");
 	}
 	
-	//아이템 사용 - 사료, 간식, 목욕, 화장실, 놀아주기
+	//아이템 사용
 	void usePetItem(int tempNum) {
 		System.out.println("\n-----------[아이템 사용]------------\n");
 		System.out.println(petItems[temp[tempNum]].name + "을(를) 사용했습니다.");
@@ -190,19 +190,19 @@ public class Pet {
 							" 증가했습니다.");
 		
 		hunger += petItems[temp[tempNum]].hunger;
-		if(hunger > max) { 
+		if(hunger >= max) { 
 			hunger = max;
 			System.out.println("\n" + name + "의 허기 지수가 모두 채워졌습니다.");
 		}
 		
 		clean += petItems[temp[tempNum]].clean;
-		if(clean > max) {
+		if(clean >= max) {
 			clean = max;
 			System.out.println("\n" + name + "의 청결 지수가 모두 채워졌습니다.");
 		}
 		
 		fun += petItems[temp[tempNum]].fun;
-		if(fun > max) {
+		if(fun >= max) {
 			fun = max;
 			System.out.println("\n" + name + "의 재미 지수가 모두 채워졌습니다.");
 		}
